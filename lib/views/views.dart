@@ -1,11 +1,6 @@
 export 'package:flutterprueba/views/cards_screen.dart';
-export 'package:flutterprueba/views/listview_builder_screen.dart';
-export 'package:flutterprueba/views/alert_screen.dart';
-export 'package:flutterprueba/views/home.dart';
+export 'package:flutterprueba/views/second_screen.dart';
 export 'package:flutter/material.dart';
-export 'package:flutterprueba/views/listview_screen.dart';
-export 'package:flutterprueba/views/listview_screen2.dart';
 export 'package:sidebarx/sidebarx.dart';
 export '../assets/colors/colors.dart';
-export 'begin.dart';
-export 'listview_screen2.dart';
+

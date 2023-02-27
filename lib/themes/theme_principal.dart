@@ -48,15 +48,6 @@ class ThemePrincipal{
 
   );
 
-  static final ThemeData darkTheme = ThemeData.dark().copyWith(
-      primaryColor: Colors.redAccent,
-      appBarTheme: const AppBarTheme(
-          color: Colors.redAccent,
-          elevation:0
-      ),
-      scaffoldBackgroundColor: Colors.black //El fondo de la app
-
-  );
 
 
 

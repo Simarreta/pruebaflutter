@@ -1,7 +1,16 @@
 import '../views/views.dart';
 
-class TarjetaNueva extends StatelessWidget {
-  const TarjetaNueva({Key? key}) : super(key: key);
+class TextoEditable extends StatelessWidget {
+
+  String textoPrincipal, textoSerie;
+  IconData icono;
+
+  TextoEditable({
+    Key? key,
+    required this.textoPrincipal,
+    required this.textoSerie,
+    required this.icono
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -9,24 +18,10 @@ class TarjetaNueva extends StatelessWidget {
         child: Column(
           children: [
             ListTile(
-                leading: Icon(Icons.photo_album_outlined, color: Colors.blueAccent,),
-                title: Text("patata")
+                leading: Icon(icono, color: Colors.blueAccent,),
+                title: Text("$textoPrincipal: $textoSerie")
             ),
-            Padding(
-              padding: const EdgeInsets.only(right: 5),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  TextButton(onPressed: (){},
-                      child: Text("Ok"),
 
-                  ),
-                  TextButton(onPressed: (){},
-                      child: Text("Cancel")
-                  ),
-                ],
-              ),
-            )
           ],
         )
     );

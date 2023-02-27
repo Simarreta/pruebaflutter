@@ -5,11 +5,14 @@ class TarjetaNueva2 extends StatelessWidget {
   //Aquí pongo los elementos que se van a pedir cuando se llama a este widget
   final String imgUrl;
   final String? textoImagen;
+  final double heigh;
 
   const TarjetaNueva2({
     Key? key,
+    required this.heigh,
     required this.imgUrl,
-    this.textoImagen}) : super(key: key);
+    this.textoImagen,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +32,7 @@ class TarjetaNueva2 extends StatelessWidget {
               image: NetworkImage(imgUrl),
               placeholder: AssetImage('img/jar-loading.gif'),
               width: double.infinity,
-              height: 300,
+              height: heigh,
               fit: BoxFit.cover,
               fadeInDuration: Duration(milliseconds: 300),
             ),
