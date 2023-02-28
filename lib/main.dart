@@ -3,7 +3,16 @@ import 'package:flutterprueba/themes/theme_principal.dart';
 import 'package:flutter/services.dart';
 import 'views/views.dart';
 
+/**
+ * Created by
+ * Programador: Ana
+ *
+ * Este archivo pertenece a la aplicación realizada por Ana Guixart
+ */
+
 void main() {
+
+  //Fijo la orientación siempre vertical
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
       .then((_) {
@@ -20,8 +29,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: AppRoutes.initialRoute,
       routes: AppRoutes.getAppRoutes(),
-     // onGenerateRoute: AppRoutes.onGenerateRoute,
-      /*no hace falta poner la variable porque es la misma en los dos onGenerateRoute*/
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemePrincipal.lightTheme,

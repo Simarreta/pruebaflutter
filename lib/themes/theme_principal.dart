@@ -1,5 +1,7 @@
 import '../views/views.dart';
 
+
+
 class ThemePrincipal{
 
   static const Color primary= Colors.green;
@@ -18,7 +20,7 @@ class ThemePrincipal{
 
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.indigo,
+        backgroundColor: Colors.blueAccent,
         shape: StadiumBorder()
       )
     ),

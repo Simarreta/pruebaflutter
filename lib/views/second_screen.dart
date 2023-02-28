@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterprueba/widgets/texto_editable.dart';
 import 'package:flutterprueba/widgets/tarjeta_nueva.dart';
-import 'package:flutterprueba/widgets/tarjeta_nueva2.dart';
 
 class SegundaPantalla extends StatelessWidget {
   Map<String,dynamic> elementosSerie;
@@ -24,15 +24,18 @@ class SegundaPantalla extends StatelessWidget {
     return Scaffold(
       body:  SingleChildScrollView(
         child: Center(
-          child: Column(
-            children: <Widget>[
-              TarjetaNueva2(imgUrl: poster_path, textoImagen: name, heigh:400),
-              ...elementosSerie.entries.map((elementSerie) => TextoEditable(
-                textoPrincipal: elementSerie.key,
-                textoSerie: elementSerie.value.toString(),
-                icono: Icons.info_outlined
-              )).toList(),
-          ]
+          child: Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: Column(
+              children: <Widget>[
+                TarjetaNueva(imgUrl: poster_path, textoImagen: name, heigh:400),
+                ...elementosSerie.entries.map((elementSerie) => TextoEditable(
+                  textoPrincipal: elementSerie.key,
+                  textoSerie: elementSerie.value.toString(),
+                  icono: Icons.info_outlined
+                )).toList(),
+            ]
+            ),
           )
         ),
       ),

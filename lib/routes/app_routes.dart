@@ -1,17 +1,14 @@
-import 'package:flutterprueba/models/menu_option.dart';
-
 import '../models/menu_option.dart';
-import '../views/second_screen.dart';
-import '../views/cards_screen.dart';
 import '../views/views.dart';
 
 class AppRoutes{
 
-  static const initialRoute= 'cards_screen';
+  static const initialRoute= 'home_screen';
 
   static final menuOptions =<MenuOption>[
-    MenuOption(route: 'cards_screen', name: 'CardsScreen', screen: const CardsScreen(),icon: Icons.add),
-    MenuOption(route: 'second_screen', name: 'SecondScreen', screen: const CardsScreen(),icon: Icons.add),
+    MenuOption(route: 'cards_screen', name: 'CardsScreen', screen: const CardsScreen()),
+    MenuOption(route: 'second_screen', name: 'SecondScreen', screen: const CardsScreen()),
+    MenuOption(route: 'home_screen', name: 'HomeScreen', screen: const HomeScreen()),
 
   ];
 
@@ -19,7 +16,7 @@ class AppRoutes{
   static Map<String, Widget Function(BuildContext)> getAppRoutes(){
 
     Map<String, Widget Function(BuildContext)> appRoutes={};
-    appRoutes.addAll({ 'cards_screen':(BuildContext context)=> const CardsScreen() });
+    appRoutes.addAll({ 'home_screen':(BuildContext context)=> const HomeScreen() });
     for(final option in menuOptions){
           appRoutes.addAll({ option.route:(BuildContext context)=> option.screen });
     }

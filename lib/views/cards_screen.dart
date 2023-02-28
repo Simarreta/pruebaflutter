@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 import 'package:flutter/cupertino.dart';
 
 import '../entity/serie.dart';
-import '../widgets/tarjeta_nueva2.dart';
+import '../widgets/tarjeta_nueva.dart';
 
 class CardsScreen extends StatefulWidget {
   const CardsScreen({Key? key}) : super(key: key);
@@ -18,6 +18,7 @@ class _CardsScreenState extends State<CardsScreen> {
 
   List<Serie> series =[];
 
+  //ESTA ES LA PETICIÓN DE LAS SERIES
   Future<void> seriesPopulares() async {
     final String url = 'https://api.themoviedb.org/3/tv/popular?api_key=c6aeee577586ba38e487b74dfede5deb&language=en-US&page=1';
     final response = await http.get(Uri.parse(url));
@@ -59,10 +60,6 @@ class _CardsScreenState extends State<CardsScreen> {
   }
 
 
-  alert(){
-    debugPrint("Hola");
-  }
-
 
   @override
   Widget build(BuildContext context) {
@@ -91,7 +88,7 @@ class _CardsScreenState extends State<CardsScreen> {
                       );
                     Navigator.push(context, route);
                        },
-                  child: TarjetaNueva2(imgUrl: 'https://image.tmdb.org/t/p/w500/${serie.poster_path}', textoImagen: '${serie.name}', heigh: 300,),
+                  child: TarjetaNueva(imgUrl: 'https://image.tmdb.org/t/p/w500/${serie.poster_path}', textoImagen: '${serie.name}', heigh: 500,),
                   )
                  ],
               );
