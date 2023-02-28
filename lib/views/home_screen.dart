@@ -16,22 +16,22 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       body:  AnimatedBackground(
         behaviour: RandomParticleBehaviour(),
           vsync: this,
-          child: Padding(
-            padding: EdgeInsets.only(top: 600,left: 100),
+          child: Center(
             child: ElevatedButton(
-                child: Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Text("Empieza la aplicación",
-                      style: TextStyle(
-                          fontSize: 15
-                      )
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Text("Empieza la aplicación",
+                        style: TextStyle(
+                            fontSize: 15
+                        )
+                    ),
                   ),
-                ),
-                //Si no vull que funcione el pose a null i au
-                //onPressed: ()=>displayDialogAndroid(context),
-                onPressed: ()=> Navigator.pushNamed(context, "cards_screen")
-            ),
-          )
+                  //Si no vull que funcione el pose a null i au
+                  //onPressed: ()=>displayDialogAndroid(context),
+                  onPressed: ()=> Navigator.pushNamed(context, "cards_screen")
+              ),
+          ),
+
           )
       );
   }

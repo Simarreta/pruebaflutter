@@ -10,3 +10,5 @@ Esta aplicación está realizada para la prueba técnica de Doonamis.
  y por falta de tiempo no quería no poder realizar todo lo demás solo por eso. 
  No se puede girar ni tampoco soporta el darkmode
  
+## VERSION 2.0 
+ Siguiendo los puntos ahora si se puede girar y usar el modo oscuro 

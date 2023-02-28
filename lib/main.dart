@@ -11,13 +11,7 @@ import 'views/views.dart';
  */
 
 void main() {
-
-  //Fijo la orientación siempre vertical
-  WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
-      .then((_) {
     runApp( const MyApp());
-  });
 
 }
 
@@ -31,7 +25,7 @@ class MyApp extends StatelessWidget {
       routes: AppRoutes.getAppRoutes(),
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemePrincipal.lightTheme,
+      themeMode: ThemeMode.system
     );
   }
 }

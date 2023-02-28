@@ -1,4 +1,5 @@
 import '../views/views.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class TarjetaNueva extends StatelessWidget {
 
@@ -24,6 +25,21 @@ class TarjetaNueva extends StatelessWidget {
         shadowColor: Colors.blueAccent,
         child: Column(
           children:  [
+            /*FadeInImage.memoryNetwork(
+                placeholder: kTransparentImage,
+                image: '/img/noimagen.jpg',
+                height: heigh,
+                fit: BoxFit.cover,
+                imageErrorBuilder: (context, error, stackTrace) => Container(
+                height: heigh,
+                decoration: BoxDecoration(
+                  color: Colors.grey[300],
+                ),
+                child: Center(
+                  child: Icon(Icons.image_not_supported),
+                ),
+              ),
+            ),*/
              FadeInImage(
               image: NetworkImage(imgUrl),
               placeholder: AssetImage('img/jar-loading.gif'),

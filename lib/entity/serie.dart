@@ -1,7 +1,13 @@
+import 'package:floor/floor.dart';
+//entity/serie.dart
+
+@Entity(tableName: 'series')
 class Serie {
 
-   final String first_air_date;
+  @primaryKey
    final int id;
+
+   final String first_air_date;
    final String name;
    final String original_language;
    final String overview;
