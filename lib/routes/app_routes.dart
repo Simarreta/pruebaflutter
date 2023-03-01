@@ -7,7 +7,7 @@ class AppRoutes{
 
   static final menuOptions =<MenuOption>[
     MenuOption(route: 'cards_screen', name: 'CardsScreen', screen: const CardsScreen()),
-    MenuOption(route: 'second_screen', name: 'SecondScreen', screen: const CardsScreen()),
+    //MenuOption(route: 'second_screen', name: 'SecondScreen', screen: const CardsScreen()),
     MenuOption(route: 'home_screen', name: 'HomeScreen', screen: const HomeScreen()),
 
   ];

@@ -15,7 +15,7 @@ class ThemePrincipal{
 
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Colors.purple,
         shape: StadiumBorder()
       )
     ),
@@ -26,15 +26,15 @@ class ThemePrincipal{
 
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
       primaryColor: Colors.redAccent,
-      appBarTheme: const AppBarTheme(
-          color: Colors.redAccent,
-          elevation:0
-      ),
-      scaffoldBackgroundColor: Colors.black, //El fondo de la app
+
+
+    floatingActionButtonTheme: const FloatingActionButtonThemeData(
+        backgroundColor: Colors.redAccent
+    ),
 
       elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.redAccent,
+            backgroundColor: Colors.green,
                 shape: StadiumBorder()
             )
       ),

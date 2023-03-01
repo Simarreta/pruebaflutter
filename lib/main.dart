@@ -11,7 +11,7 @@ import 'views/views.dart';
  */
 
 void main() {
-    runApp( const MyApp());
+    runApp( MaterialApp(home:MyApp()));
 
 }
 
@@ -20,12 +20,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Brightness platformBrightness = MediaQuery.of(context).platformBrightness;
+    final bool isDarkModeEnabled = platformBrightness == Brightness.dark;
+
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       initialRoute: AppRoutes.initialRoute,
       routes: AppRoutes.getAppRoutes(),
-      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      themeMode: ThemeMode.system
+      theme:isDarkModeEnabled ? ThemePrincipal.darkTheme : ThemePrincipal.lightTheme
     );
   }
 }

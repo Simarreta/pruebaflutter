@@ -21,25 +21,38 @@ class _CardsScreenState extends State<CardsScreen> {
   List<Serie> series =[];
   var database;
 
+  /**
+  * DESDE ESTA FUNCIÓN COMPRUEBO SI TENGO O NO INTERNET Y DESDE DONDE TIENE QUE SACAR LOS DATOS,
+  * SI DESDE INTERNET O DESDE LA BASE DE DATOS
+  **/
 
   Future<void> _loadData() async {
     final database = await $FloorAppDatabase.databaseBuilder('app_database.db').build();
-    try {
-      final series = await database.serieDao.findAllSeries();
-      setState(() {
-        this.series = series;
-      });
-    } catch (e) {
-      print('Error al cargar los datos de la base de datos local: $e');
+    try{
       final series = await seriesPopulares();
       setState(() {
         this.series = series;
       });
+
+    }catch (e){
+      final series = await database.serieDao.findAllSeries();
+
+      setState(() {
+        this.series = series;
+      });
+
     }
+
   }
 
+
+  /**
+   * DESDE ESTA FUNCIÓN GUARDO LOS DATOS QUE RETORNA LA PETICIÓN A LA API
+   *
+   **/
+
   Future<List<Serie>> seriesPopulares() async {
-    final String url = 'https://api.themoviedb.org/3/tv/popular?api_key=c6aeee577586ba38e487b74dfede5deb&language=en-US&page=1';
+    const String url = 'https://api.themoviedb.org/3/tv/popular?api_key=c6aeee577586ba38e487b74dfede5deb&language=en-US&page=1';
     final response = await http.get(Uri.parse(url));
 
     if (response.statusCode == 200) {
