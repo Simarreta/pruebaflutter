@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutterprueba/entity/language.dart';
 import 'package:flutterprueba/views/second_screen.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/cupertino.dart';
@@ -52,7 +53,9 @@ class _CardsScreenState extends State<CardsScreen> {
    **/
 
   Future<List<Serie>> seriesPopulares() async {
-    const String url = 'https://api.themoviedb.org/3/tv/popular?api_key=c6aeee577586ba38e487b74dfede5deb&language=en-US&page=1';
+    print("hola?");
+    print(idioma);
+    String url = 'https://api.themoviedb.org/3/tv/popular?api_key=c6aeee577586ba38e487b74dfede5deb&language=$idioma&page=1';
     final response = await http.get(Uri.parse(url));
 
     if (response.statusCode == 200) {

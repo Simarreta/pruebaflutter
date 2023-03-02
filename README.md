@@ -11,6 +11,6 @@ Esta aplicación está realizada para la prueba técnica de Doonamis.
  No se puede girar ni tampoco soporta el darkmode
  
 ## VERSION 2.0 
- Siguiendo los puntos ahora sí se puede girar y usar el modo oscuro. No he usado el cambio de idioma porque no sabia 
- cómo implementarlo ya que yo he usado flutter_i18n, pero teniendo los string yo a mano. 
+ Siguiendo los puntos ahora sí se puede girar y usar el modo oscuro. 
+ También está el multiidioma.
  El modo offline funciona. 
